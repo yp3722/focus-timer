@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.main-container{
+  padding: 8vh 5vw;
+  align-self: center;
+  align-items: flex-start;
+}
+
+.left-child{
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.right-child{
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+
+
+@media screen and (min-width: 1023px) {
+  .main-container{
+    display: flex;
+    justify-content:center;
+  }
+
+  .left-child{
+    max-width: 500px;
+    position: sticky;
+  }
+
+  .right-child{
+    max-width: 800px;
+    padding: 0px;
+  }
+
+} 

@@ -1,0 +1,14 @@
+body {
+  font-size: 18px; 
+  line-height: 1.5;
+  font-family: 'Asap', sans-serif;
+  background-color: #fdfdfd;
+  color: #1d1d1d;
+  min-width: 350px;
+  margin: 0;
+}
+
+body.dark-mode {
+  background-color: #0B1416;
+  color: #fdfdfd;
+}
