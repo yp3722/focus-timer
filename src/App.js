@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {MainTimer} from "./Components"
 
 class App extends Component {
   render() {
@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <div className="main-container">
           <div className="left-child">
-            <p>Test-left</p>
+            <MainTimer />
           </div>
           <div className="right-child">
             <p>Test-right </p>
@@ -17,11 +17,7 @@ class App extends Component {
             <li>Setup npm - done</li>
             <li>Setup react - done</li>
             <li>Create homepage layout - done</li>
-            <li>Design ui</li>
-            <li>Code components</li>
-            <li>assemble</li>
             </ul>
-
           </div>
         </div>
       </div>

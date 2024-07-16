@@ -20,7 +20,13 @@
   border-color: black;
 }
 
-
+.mode-selection{
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  display: flex;
+  justify-content:space-evenly
+}
 
 @media screen and (min-width: 1023px) {
   .main-container{
@@ -31,6 +37,7 @@
   .left-child{
     max-width: 500px;
     position: sticky;
+    top: 8vh;
   }
 
   .right-child{
