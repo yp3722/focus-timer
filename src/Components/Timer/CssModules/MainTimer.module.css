@@ -1,0 +1,93 @@
+
+
+.counterContainer{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40vw;
+    position: relative;
+    z-index: 1;
+}
+
+.counterLabel{
+    font-size: 7vw;
+    margin: 0px;
+    padding: 0px 10px;
+    text-align: left;
+    top: 0; 
+    left: 0; 
+    position: absolute;
+    background-color: rgb(233, 77, 77);
+    color: #eaeaea;
+    border-radius: 10px;
+}
+
+.counter{
+    font-size: 30vw;
+    margin: 0px;
+    text-align: left;
+    top: 2vw; 
+    left: 0; 
+    position: absolute;
+}
+
+.controlPanel{
+    z-index: 2;
+}
+
+
+.modeSelectionContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
+.timerControlsContainer{
+    display: flex;
+}
+
+@media screen and (min-width: 1300px) {
+
+    .parentContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .controlPanel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .counterContainer{
+        padding-bottom: 0px;
+        align-items: center;
+    }
+
+
+    .counterLabel{
+        font-size: 2em;
+        position: relative;
+        padding: 10px;
+    }
+    
+    .counter{
+        font-size: 12em;
+        width: fit-content;
+        position: relative;
+    }
+
+    .timerControlsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .modeSelectionContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20vh;
+    }
+
+  } 

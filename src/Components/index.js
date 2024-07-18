@@ -1,1 +1,1 @@
-export {Greeting, CounterDisplay, ModeSelectButton, MainTimer, TimerControlButton} from "./Timer";
+export {Greeting, ModeSelectButton, MainTimer, TimerControlButton} from "./Timer";

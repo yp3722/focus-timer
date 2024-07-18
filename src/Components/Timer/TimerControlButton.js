@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './CssModules/TimerControlButton.module.css'
 
 const TimerControlButton = ({ buttonLabel, onClickSetState, onClickState, classNameModifier}) => {
   
@@ -6,11 +7,8 @@ const TimerControlButton = ({ buttonLabel, onClickSetState, onClickState, classN
     onClickSetState(onClickState);
   };
 
-  // Construct the modifier class if it exists
-  const modifierClass = classNameModifier ? ` mode-select-button--${classNameModifier}` : "";
-
   return (
-    <div className={`mode-select-button${modifierClass}`} onClick={handleClick}>
+    <div className={styles.button} onClick={handleClick}>
       <h2>{buttonLabel}</h2>
     </div>
   );
