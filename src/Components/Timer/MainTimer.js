@@ -3,6 +3,7 @@ import ModeSelectButton from './ModeSelectButton';
 import TimerControlButton from './TimerControlButton';
 import styles from "./CssModules/MainTimer.module.css"
 import { formatTime, getTimerLabel } from '../../utils/helperFunctions';
+import {logUserInteraction} from '../../utils/telemetry'
 
   const MainTimer = () => {
     const [clockModeParams, setClockModeParams] = useState(['focus-time',1500]);    // [mode, duration]....modes : focus-time, short-break, long-break 
@@ -11,11 +12,11 @@ import { formatTime, getTimerLabel } from '../../utils/helperFunctions';
     const timerLabel = getTimerLabel(clockModeParams[0]);
     
     useEffect(() => {
-        console.log('MainTimer  --Component rerendered');
-    });
+      logUserInteraction('mode_change', `mode=${clockModeParams[0]}`);
+    }, [clockModeParams]);
 
     useEffect(() => {
-        console.log(`timerState changed to: ${timerState}`);
+        logUserInteraction('timer-state_change', `timer_state=${timerState}`);
         switch (timerState) {
           
           case 'started':
@@ -34,12 +35,13 @@ import { formatTime, getTimerLabel } from '../../utils/helperFunctions';
             setTimerParams([0,null]);
         }
     }, [timerState]);
-
+  
     useEffect(() => {
-      console.log(`timer params: ${timerParams}`);
+      //console.log(`timer params: ${timerParams}`);
       // timer finished update checkpoints
-      if(timerParams[0] === clockModeParams[1]){
-        setTimerState('ready')
+      if((timerParams[0] === clockModeParams[1])) {
+        logUserInteraction('none', `timer_finished; mode=${clockModeParams[0]}`);
+        setTimerState('ready');
       }
     }, [timerParams]);
 
